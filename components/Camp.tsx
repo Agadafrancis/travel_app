@@ -1,4 +1,9 @@
-
+interface CampProps {
+  backgroundImage: string;
+  title: string;
+  subtitle: string;
+  peopleJoined: string;
+}
 
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) => {
   return (
@@ -8,7 +13,6 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) 
   )
 }
 
-export default Camp
 const Camp = () => {
   return (
     <section className="border-2 border-green-500 max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
