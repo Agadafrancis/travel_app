@@ -1,3 +1,4 @@
+import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
 
 interface CampProps {
@@ -20,6 +21,27 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) 
               height={28}
             /> 
           </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="bold-18 text-white">{title}</h4>
+            <p className="regular-14 text-white">{subtitle}</p>
+          </div>
+        </div>
+
+        <div className="flexCenter gap-6">
+          <span className="flex -space-x-4 overflow-hidden">
+            {PEOPLE_URL.map((url) => (
+              <Image 
+                className="inline-block h-10 w-10 rounded-full"
+                src={url}
+                key={url}
+                alt="person"
+                width={52}
+                height={52}
+              />
+            ))}
+          </span>
+          <p className="bold-16 md:bold-20 text-white">{peopleJoined}</p>
         </div>
       </div>
     </div>
@@ -28,7 +50,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) 
 
 const Camp = () => {
   return (
-    <section className="border-2 border-green-500 max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
+    <section className="max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
       <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]">
 
         <CampSite
