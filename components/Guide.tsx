@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Guide = () => {
   return (
-    <section className="flexCenter flex-col">
+    <section className="flexCenter flex-col padding-container max-container">
       <div className="border-2 border-red-500 padding-container max-container w-full pb-24">
         <Image
           src="/camp.svg"
@@ -19,8 +19,18 @@ const Guide = () => {
           <p className="regular-16 text-gray-30 xl:max-w-[520px]">With the hilink application, you will no longer get lost over and over again, because we aready support offline maps when there is no internet connection in the field. Invite your family, friends and relatives to have fun in the wilderness through the valley and reach the top of the mountain</p>
         </div>
       </div>
+
+      <div className=" flexCenter relative w-full border-2 border-blue-500">
+        <Image 
+          src="/boat.png"
+          alt="boat"
+          width={1440}
+          height={580}
+          className="w-full object-cover object-center lg:rounded-5xl"
+        />
+      </div>
     </section>
   )
 }
 
-export default Guide
+export default Guide;
