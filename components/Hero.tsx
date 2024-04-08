@@ -15,7 +15,7 @@ const Hero = () => {
           alt="camp"
           width={50}
           height={50}
-          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50]"
+          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]"
         />
 
         <h1 className="bold-52 lg:bold-88">Louis Tech Camp Area</h1>

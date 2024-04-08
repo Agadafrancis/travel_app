@@ -10,7 +10,7 @@ interface CampProps {
 
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) => {
   return (
-    <div className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl`}>
+    <div className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-5xl 2xl:rounded-5xl`}>
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
         <div className="flexCenter gap-4">
           <div className="rounded-full bg-green-50 p-4">
@@ -50,7 +50,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined}: CampProps) 
 
 const Camp = () => {
   return (
-    <section className="max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
+    <section className="2xl:max-container lg:padding-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
       <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]">
 
         <CampSite
@@ -60,7 +60,12 @@ const Camp = () => {
           peopleJoined="50+ Joined"
         />
         
-        <CampSite />
+        <CampSite 
+          backgroundImage="bg-bg-img-2"
+          title="Mount View Camp"
+          subtitle="Somewhere in the Wilderness"
+          peopleJoined="50+ Joined"
+        />
       </div>
     </section>
   )
