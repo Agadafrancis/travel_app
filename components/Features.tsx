@@ -1,8 +1,8 @@
 const Features = () => {
   return (
-    <div>
-      Features
-    </div>
+    <section className="border-2 border-red-500">
+
+    </section>
   )
 }
 
